@@ -43,7 +43,7 @@ export default function Weather(props) {
         height: '100%',
     },
     text1:{
-        color: 'blue',
+        color: 'red',
         textAlign: 'center',
         fontSize: 20,
         paddingTop: 25
