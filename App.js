@@ -6,7 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import WeatherScreen from './screen/WeatherScreen';
 import ZipCodeScreen from './screen/ZipCodeScreen';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator()
 
 export default function App() {
     return (
