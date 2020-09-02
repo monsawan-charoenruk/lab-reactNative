@@ -9,14 +9,17 @@ const availableZipItems = [
     { place: 'Chiangmai', code: '50000' },
     { place: 'Khonkaen', code: '40000' },
     { place: 'Chonburi', code: '20000' },
+    { place: 'Bangkok', code: '10100' },
+    { place: 'Nongkhai', code: '43000' },
+    { place: 'Surat Thani', code: '86000' },
 ]
 const ZipItem = ({place, code, navigation}) => (
-    <TouchableHighlight onPress={() => {
+    <TouchableHighlight style={styles.touch} onPress={() => {
         navigation.navigate('Weather', {zipCode: code})
     }}>
         <View style={styles.zipItem}>
-            <Text>{place}</Text>
-            <Text>{code}</Text>
+            <Text style={styles.zipPlace}>{place}</Text>
+            <Text style={styles.zipCode}>{code}</Text>
         </View>
     </TouchableHighlight>    
 )
@@ -34,14 +37,23 @@ export default function ZipCodeScreen(){
    }
    const styles = StyleSheet.create({
        zipItem:{
-           flex: 1,
-           flexDirection: 'row',
-           justifyContent: 'space-between'
+            flex: 1,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            paddingHorizontal: 10,
+            paddingVertical: 20,
+            borderBottomWidth: 2,
+            borderBottomColor: 'violet'
         },
        zipPlace:{
-            flex: 1,
+            flex: 5,
+            color: 'orange'
         },
         zipCode:{
-            flex: 1,
+            flex: 0,
+            color: 'yellow'
+        },
+        touch:{
+            backgroundColor: 'purple'
         }
    })
